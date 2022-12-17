@@ -1,0 +1,87 @@
+﻿<Window x:Class="CourseWorkProgram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWorkProgram"
+        mc:Ignorable="d"
+        Title="Shop" Height="450" Width="800" MaxHeight="450" MaxWidth="800">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TabControl>
+            <TabItem Header="Комплектующие" FontWeight="DemiBold" Margin="-3,-1,-4,-2">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <ListBox Name="AD" Margin="0,26,0,0" SelectionChanged="AD_SelectionChanged">
+            <ListBox.Background>
+                <ImageBrush ImageSource="/gradient.jpg"/>
+            </ListBox.Background>
+            <ListBoxItem Name="VideoCards" Content="Видеокарты" FontWeight="Bold" BorderBrush="Black" Foreground="Silver"/>
+            <ListBoxItem Name="CPU" Content = "Процессоры" FontWeight="Bold" BorderBrush="Black" Foreground="Silver"/>
+        </ListBox>
+        <TabControl Grid.Column="1" Margin="0,0,0,1">
+            <TabItem Header="Список" FontWeight="DemiBold" Margin="-2,-2,-7,0" BorderBrush="{x:Null}">
+                <TabItem.Background>
+                    <ImageBrush/>
+                </TabItem.Background>
+                <Grid Margin="-3,0,0,0">
+                    <Grid.Background>
+                        <ImageBrush/>
+                    </Grid.Background>
+                    <DataGrid Name="List" Margin="0,0,0,46"/>
+                    <Button Name = "Add" Content="Добавить" Margin="310,0,19,10" Click="Add_Click" Height="20" VerticalAlignment="Bottom">
+                        <Button.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF30738A"/>
+                                <GradientStop Color="DeepSkyBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF2F1431"/>
+                                <GradientStop Color="#FFF104FF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button Name = "Update" Content="Обновить" Margin="230,0,99,10" Click="Update_Click" Height="20" VerticalAlignment="Bottom" FontWeight="Bold">
+                        <Button.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF30738A"/>
+                                <GradientStop Color="DeepSkyBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF2F1431"/>
+                                <GradientStop Color="#FFF104FF" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button Name ="Info" Content="Info" Margin="157,0,197,10" Height="20" VerticalAlignment="Bottom" Click="Info_Click">
+                        <Button.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF30738A"/>
+                                <GradientStop Color="DeepSkyBlue" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Foreground>
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF2F1431"/>
+                                <GradientStop Color="#FFF104FF" Offset="1"/>
+                            </LinearGradientBrush>
+                            
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

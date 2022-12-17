@@ -1,0 +1,23 @@
+﻿<Window x:Class="CourseWork228.Info"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CourseWork228"
+        mc:Ignorable="d"
+        Title="Info" Height="450" Width="800">
+    <Grid>
+        <Label Content="Разработано студентами Славного Новосибирского Колледжа Электронники и Вычислительной Техники" HorizontalAlignment="Left" Margin="114,28,0,0" VerticalAlignment="Top" Background="{x:Null}" FontFamily="Segoe UI Semibold" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5100FF" Offset="1"/>
+                    <GradientStop Color="Red"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Image Source="hacker.gif"  HorizontalAlignment="Left" Height="212" Margin="271,106,0,0" VerticalAlignment="Top" Width="208"/>
+
+
+
+    </Grid>
+</Window>
